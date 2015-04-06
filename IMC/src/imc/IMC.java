@@ -15,7 +15,13 @@ public class IMC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Criação de um objeto ex da classe Ex2
+          IMCImpl ex = new IMCImpl();
+          //posição da tela ao abri-la
+          ex.setLocation(400,200);
+          //tornando a tela visível
+          ex.setVisible(true);
+
     }
     
 }
