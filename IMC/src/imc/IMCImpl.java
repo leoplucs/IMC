@@ -159,27 +159,27 @@ public class IMCImpl extends JFrame {
              string com essa frase*/
             if (tipo == 0) {
                 if (imc_mulheres[0] > massa) {
-                    string = String.format("CUIDADO!!! \n Você estar abaixo do peso! \n IMC %.2f", massa);
+                    string = String.format("CUIDADO!!! \n Você está abaixo do peso! \n IMC %.2f", massa);
                     foto = 0;
                 } else if ((imc_mulheres[0] < massa) && (massa <= imc_mulheres[1])) {
-                    string = String.format("PARABENS!! \n Você estar com o peso ideal! \n IMC %.2f", massa);
+                    string = String.format("PARABENS!! \n Você está com o peso ideal! \n IMC %.2f", massa);
                     foto = 1;
                 } else {
-                    string = String.format("CUIDADO!! \n Você estar obesa! \n IMC %.2f", massa);
+                    string = String.format("CUIDADO!! \n Você está obesa! \n IMC %.2f", massa);
                     foto = 2;
                 }
                 //configure a foto conforme a posição da variável foto
                 Lfoto.setIcon(imagemM[foto]);
             } else if (tipo == 1) {
                 if (imc_homens[0] > massa) {
-                    string = String.format("CUIDADO!!! \n Você estar abaixo do peso! \n IMC %.2f", massa);
+                    string = String.format("CUIDADO!!! \n Você está abaixo do peso! \n IMC %.2f", massa);
                     //configura a posição que será exibido a imagem
                     foto = 0;
                 } else if ((imc_homens[0] < massa) && (massa < imc_homens[1])) {
-                    string = String.format("PARABENS!! \n Você estar com o peso ideal! \n IMC %.2f", massa);
+                    string = String.format("PARABENS!! \n Você está com o peso ideal! \n IMC %.2f", massa);
                     foto = 1;
                 } else {
-                    string = String.format("CUIDADO!! \n Você estar obeso! \n IMC %.2f", massa);
+                    string = String.format("CUIDADO!! \n Você está obeso! \n IMC %.2f", massa);
                     foto = 2;
                 }
                 //configure a foto conforme a posição da variável foto
