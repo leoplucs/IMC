@@ -11,9 +11,6 @@ package imc;
  */
 public class IMC {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         //Criação de um objeto ex da classe Ex2
           IMCImpl ex = new IMCImpl();
