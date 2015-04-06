@@ -24,7 +24,6 @@ import javax.swing.JOptionPane;
 //painel
 import javax.swing.JPanel;
 //caixa de textos
-import javax.swing.JTextArea;
 //campo para inserção de valores ou caracteres
 import javax.swing.JTextField;
 //Evento para de ouvir um evento do botão
@@ -32,7 +31,6 @@ import java.awt.event.ActionListener;
 //Evento de executar uma ação do evento que foi ouvido(ativado)
 import java.awt.event.ActionEvent;
 //Tratador de erros
-import java.util.InputMismatchException;
 
 //Criação da classe EX2 extendendo a classe JFrame que foi importada
 public class IMCImpl extends JFrame {
@@ -62,8 +60,8 @@ public class IMCImpl extends JFrame {
     private JButton butao2 = new JButton("Limpar Dados");
     //criação das label's
     private JLabel Lsexo = new JLabel("Escolha o sexo:");
-    private JLabel Laltura = new JLabel("Altura em cm:");
-    private JLabel Lpeso = new JLabel("Peso em Kg:");
+    private JLabel Laltura = new JLabel("Altura em centímetros:");
+    private JLabel Lpeso = new JLabel("Peso em Kilogramas:");
     private JLabel Lresultado = new JLabel("");
     private JLabel Lfoto = new JLabel("");
     //criação de campos com 5 de largura
@@ -112,6 +110,7 @@ public class IMCImpl extends JFrame {
         //criação de uma classe interna anônima para butao
         butao.addActionListener(
                 new ActionListener() {
+                    @Override
                     public void actionPerformed(ActionEvent event) {
                         switch (escolha.getSelectedIndex()) {
                             /*caso seja a primeira opção que foi selecionada na caixa de seleção
@@ -136,6 +135,7 @@ public class IMCImpl extends JFrame {
         butao2.addActionListener(
                 new ActionListener() {
                     //ao clicar no butao2 de nome limpar chama o método limpar
+                    @Override
                     public void actionPerformed(ActionEvent event) {
                         limpar();
                     }
@@ -159,27 +159,27 @@ public class IMCImpl extends JFrame {
              string com essa frase*/
             if (tipo == 0) {
                 if (imc_mulheres[0] > massa) {
-                    string = String.format("CUIDADO!!!Voce estar abaixo do peso! IMC %.2f", massa);
+                    string = String.format("CUIDADO!!! \n Você estar abaixo do peso! \n IMC %.2f", massa);
                     foto = 0;
                 } else if ((imc_mulheres[0] < massa) && (massa <= imc_mulheres[1])) {
-                    string = String.format("PARABENS!!Voce estar com o peso ideal! IMC %.2f", massa);
+                    string = String.format("PARABENS!! \n Você estar com o peso ideal! \n IMC %.2f", massa);
                     foto = 1;
                 } else {
-                    string = String.format("CUIDADO!!Voce estar obesa! IMC %.2f", massa);
+                    string = String.format("CUIDADO!! \n Você estar obesa! \n IMC %.2f", massa);
                     foto = 2;
                 }
                 //configure a foto conforme a posição da variável foto
                 Lfoto.setIcon(imagemM[foto]);
             } else if (tipo == 1) {
                 if (imc_homens[0] > massa) {
-                    string = String.format("CUIDADO!!!Voce estar abaixo do peso! IMC %.2f", massa);
+                    string = String.format("CUIDADO!!! \n Você estar abaixo do peso! \n IMC %.2f", massa);
                     //configura a posição que será exibido a imagem
                     foto = 0;
                 } else if ((imc_homens[0] < massa) && (massa < imc_homens[1])) {
-                    string = String.format("PARABENS!!Voce estar com o peso ideal! IMC %.2f", massa);
+                    string = String.format("PARABENS!! \n Você estar com o peso ideal! \n IMC %.2f", massa);
                     foto = 1;
                 } else {
-                    string = String.format("CUIDADO!!Voce estar obeso! IMC %.2f", massa);
+                    string = String.format("CUIDADO!! \n Você estar obeso! \n IMC %.2f", massa);
                     foto = 2;
                 }
                 //configure a foto conforme a posição da variável foto
