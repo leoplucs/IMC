@@ -34,7 +34,7 @@ import java.awt.event.ActionEvent;
 
 //Criação da classe EX2 extendendo a classe JFrame que foi importada
 public class IMCImpl extends JFrame {
-       //declaração das variáveis
+    //declaração das variáveis
     //Vetor de caracteres (String) de 2 colunas
 
     private String sexo[] = {"Mulher", "Homem"};
@@ -201,7 +201,6 @@ public class IMCImpl extends JFrame {
     }
 
     //método para limpar os dados da tela e retornar a tela ao seu tamanho original
-
     private void limpar() {
         Fpeso.setText("");
         Faltura.setText("");

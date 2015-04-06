@@ -13,12 +13,12 @@ public class IMC {
 
     public static void main(String[] args) {
         //Criação de um objeto ex da classe Ex2
-          IMCImpl ex = new IMCImpl();
-          //posição da tela ao abri-la
-          ex.setLocation(400,200);
-          //tornando a tela visível
-          ex.setVisible(true);
+        IMCImpl ex = new IMCImpl();
+        //posição da tela ao abri-la
+        ex.setLocation(400, 200);
+        //tornando a tela visível
+        ex.setVisible(true);
 
     }
-    
+
 }
